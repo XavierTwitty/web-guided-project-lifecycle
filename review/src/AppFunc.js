@@ -15,7 +15,7 @@ const AppFunc = () => {
     console.log(
       "APPFUNC: Component Updated - part of 1st render, and all other renders"
     );
-  });
+  }, [name]);
 
   console.log("APPFUNC: Component Rendered");
   return (
