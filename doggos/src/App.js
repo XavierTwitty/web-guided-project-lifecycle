@@ -14,7 +14,11 @@ class App extends React.Component {
   componentDidMount() {
     axios
       .get("https://dog.ceo/api/breed/husky/images")
-      .then((res) => console.log(res))
+      .then((res) => {
+        this.setState({
+          doggos: res.data.message,
+        });
+      })
       .catch((err) => console.log(err));
   }
 
