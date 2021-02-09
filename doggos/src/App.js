@@ -9,6 +9,7 @@ import axios from "axios";
 class App extends React.Component {
   state = {
     doggos: [],
+    doggoText: "",
   };
 
   componentDidMount() {
@@ -28,7 +29,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Hello Doggos</h1>
         <form onSubmit={}>
-          <input value={} onChange={} />
+          <input value={this.state.doggoText} onChange={} />
         </form>
         <div className="doggos">
           {this.state.doggos.map((doggo) => (
