@@ -27,6 +27,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Hello Doggos</h1>
+        <form onSubmit={}>
+          <input value={} onChange={} />
+        </form>
         <div className="doggos">
           {this.state.doggos.map((doggo) => (
             <img width="200" src={doggo} key={doggo} alt={doggo} />
