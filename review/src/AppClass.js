@@ -4,20 +4,20 @@ class AppClass extends React.Component {
   constructor() {
     super();
     this.state = {
-      name: "Warren"
+      name: "Warren",
     };
-    console.log("APPCLASS: Component Constructed");
+    console.log("APPCLASS: Component Constructed - 1st");
   }
 
   handleNameButtonClick = (e) => {
     this.setState({
       ...this.state,
-      name: "Allison"
+      name: "Allison",
     });
   };
 
   componentDidMount() {
-    console.log("APPCLASS: Component Mounted");
+    console.log("APPCLASS: Component Mounted - 3rd");
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -27,13 +27,12 @@ class AppClass extends React.Component {
     console.log("STATE---------------");
     console.log(prevState, this.state);
 
-    if(this.state.name !== prevState.name) {
-      
+    if (this.state.name !== prevState.name) {
     }
   }
 
   render() {
-    console.log("APPCLASS: Component Rendered");
+    console.log("APPCLASS: Component Rendered - 2nd");
     return (
       <div>
         <h1>Hello {this.state.name}.</h1>
