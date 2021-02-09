@@ -6,7 +6,7 @@ class AppClass extends React.Component {
     this.state = {
       name: "Warren",
     };
-    console.log("APPCLASS: Component Constructed - 1st");
+    console.log("1. APPCLASS: Component Constructed - 1st");
   }
 
   handleNameButtonClick = (e) => {
@@ -19,22 +19,22 @@ class AppClass extends React.Component {
   // lifecycle methods - a way to run code at a _very specific_ point in time
   // in the lifecycle of a component
   componentDidMount() {
-    console.log("APPCLASS: Component Mounted - 3rd");
+    console.log("2. APPCLASS: Component Mounted - 3rd");
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("APPCLASS: Component Updated");
-    console.log("PROPS---------------");
-    console.log(prevProps, this.props);
-    console.log("STATE---------------");
-    console.log(prevState, this.state);
+    console.log("3. APPCLASS: Component Updated");
+    console.log("4. PROPS---------------");
+    console.log("5.", prevProps, this.props);
+    console.log("6. STATE---------------");
+    console.log("7.", prevState, this.state);
 
     if (this.state.name !== prevState.name) {
     }
   }
 
   render() {
-    console.log("APPCLASS: Component Rendered - 2nd");
+    console.log("8. APPCLASS: Component Rendered - 2nd");
     return (
       <div>
         <h1>Hello {this.state.name}.</h1>
