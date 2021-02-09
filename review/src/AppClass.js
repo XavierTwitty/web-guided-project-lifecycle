@@ -16,6 +16,8 @@ class AppClass extends React.Component {
     });
   };
 
+  // lifecycle methods - a way to run code at a _very specific_ point in time
+  // in the lifecycle of a component
   componentDidMount() {
     console.log("APPCLASS: Component Mounted - 3rd");
   }
