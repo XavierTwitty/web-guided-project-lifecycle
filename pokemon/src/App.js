@@ -12,6 +12,11 @@ class App extends React.Component {
   };
 
   // set up componentDidMount, set "data" to the pokemon state
+  componentDidMount() {
+    this.setState({
+      pokemon: data,
+    });
+  }
 
   render() {
     return (
