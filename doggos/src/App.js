@@ -11,6 +11,13 @@ class App extends React.Component {
     doggos: [],
   };
 
+  componentDidMount() {
+    axios
+      .get("https://dog.ceo/api/breed/husky/images")
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }
+
   render() {
     console.log("rendering");
     return (
