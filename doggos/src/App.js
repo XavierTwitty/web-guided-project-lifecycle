@@ -7,10 +7,16 @@ import axios from "axios";
 // render the data in the render function
 
 class App extends React.Component {
-  state = {
-    doggos: [],
-    doggoText: "",
-  };
+  constructor() {
+    super();
+    this.state = {
+      doggos: [],
+      doggoText: "",
+    };
+
+    // bind non-arrow methods
+    this.handleChanges = this.handleChanges.bind(this);
+  }
 
   componentDidMount() {
     axios
