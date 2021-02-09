@@ -22,6 +22,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log("App is rendering");
     return (
       <div className="App">
         <Pokemon pokemon={this.state.pokemon} />
