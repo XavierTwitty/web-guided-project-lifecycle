@@ -27,6 +27,11 @@ class App extends React.Component {
       // only run if this.state.pokemon has been changed
       console.log("component has re-rendered, pokemon state has been updated");
     }
+
+    if () {
+      // only run this if this.state.highlightedPokemon has changed
+      console.log("component has re-rendered, highlightedPokemon state has been updated")
+    }
   }
 
   render() {
