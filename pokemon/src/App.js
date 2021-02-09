@@ -21,6 +21,14 @@ class App extends React.Component {
     }, 2000);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.pokemon !== prevState.pokemon) {
+      // ! ==  ==> tells us that our pokemon state has changed
+      // only run if this.state.pokemon has been changed
+      console.log("component has re-rendered, pokemon state has been updated");
+    }
+  }
+
   render() {
     console.log("App is rendering");
 
