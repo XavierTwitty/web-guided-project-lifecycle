@@ -39,7 +39,17 @@ class App extends React.Component {
     });
   };
 
-  handleSubmit = () => {};
+  handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .get(`https://dog.ceo/api/breed/${this.state.doggoText}/images`)
+      .then((res) => {
+        this.setState({
+          doggos: res.data.message,
+        });
+      })
+      .catch((err) => console.log(err));
+  };
 
   render() {
     console.log("rendering");
