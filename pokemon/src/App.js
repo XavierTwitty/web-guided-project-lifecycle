@@ -13,9 +13,12 @@ class App extends React.Component {
 
   // set up componentDidMount, set "data" to the pokemon state
   componentDidMount() {
-    this.setState({
-      pokemon: data,
-    });
+    setTimeout(() => {
+      // this is to mimic an API call taking 2 seconds to run
+      this.setState({
+        pokemon: data,
+      });
+    }, 2000);
   }
 
   render() {
