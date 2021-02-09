@@ -23,13 +23,19 @@ class App extends React.Component {
       .catch((err) => console.log(err));
   }
 
+  handleChanges = (e) => {
+    this.setState({
+      doggoText: e.target.value,
+    });
+  };
+
   render() {
     console.log("rendering");
     return (
       <div className="App">
         <h1>Hello Doggos</h1>
         <form onSubmit={}>
-          <input value={this.state.doggoText} onChange={} />
+          <input value={this.state.doggoText} onChange={this.handleChanges} />
         </form>
         <div className="doggos">
           {this.state.doggos.map((doggo) => (
