@@ -7,16 +7,20 @@ import axios from "axios";
 // render the data in the render function
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      doggos: [],
-      doggoText: "",
-    };
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     doggos: [],
+  //     doggoText: "",
+  //   };
 
-    // bind non-arrow methods
-    this.handleChanges = this.handleChanges.bind(this);
-  }
+  //   // bind non-arrow methods
+  //   this.handleChanges = this.handleChanges.bind(this);
+  // }
+  state = {
+    doggos: [],
+    doggoText: "",
+  };
 
   componentDidMount() {
     axios
@@ -29,11 +33,11 @@ class App extends React.Component {
       .catch((err) => console.log(err));
   }
 
-  handleChanges(e) {
+  handleChanges = (e) => {
     this.setState({
       doggoText: e.target.value,
     });
-  }
+  };
 
   handleSubmit = () => {};
 
