@@ -23,11 +23,11 @@ class App extends React.Component {
       .catch((err) => console.log(err));
   }
 
-  handleChanges = (e) => {
+  handleChanges(e) {
     this.setState({
       doggoText: e.target.value,
     });
-  };
+  }
 
   handleSubmit = () => {};
 
