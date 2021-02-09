@@ -37,7 +37,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Hello Doggos</h1>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input value={this.state.doggoText} onChange={this.handleChanges} />
         </form>
 
