@@ -29,14 +29,18 @@ class App extends React.Component {
     });
   };
 
+  handleSubmit = () => {};
+
   render() {
     console.log("rendering");
     return (
       <div className="App">
         <h1>Hello Doggos</h1>
-        <form onSubmit={}>
+
+        <form onSubmit={handleSubmit}>
           <input value={this.state.doggoText} onChange={this.handleChanges} />
         </form>
+
         <div className="doggos">
           {this.state.doggos.map((doggo) => (
             <img width="200" src={doggo} key={doggo} alt={doggo} />
