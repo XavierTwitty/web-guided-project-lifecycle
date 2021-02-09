@@ -9,13 +9,13 @@ const AppFunc = () => {
 
   useEffect(() => {
     console.log("APPFUNC: Component Mounted - Part of the 1st render");
-  }, []);
+  });
 
   useEffect(() => {
     console.log(
       "APPFUNC: Component Updated - part of 1st render, and all other renders"
     );
-  }, [name]);
+  });
 
   console.log("APPFUNC: Component Rendered");
   return (
